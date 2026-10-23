@@ -64,3 +64,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "jwt", "~> 3.3"
+gem "rack-cors", "~> 3.0"
+
+gem "bcrypt", "~> 3.1"
