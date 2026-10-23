@@ -1,0 +1,86 @@
+:root {
+  --bg: #f4f5f9;
+  --card: #ffffff;
+  --text: #1c1e2b;
+  --muted: #6b7085;
+  --primary: #5b5bd6;
+  --primary-hover: #4a4ac0;
+  --danger: #e5484d;
+  --border: #e3e5ee;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; font-size: 1.2rem; color: var(--primary); text-decoration: none; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+
+.container { max-width: 640px; margin: 32px auto; padding: 0 16px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(20, 20, 50, 0.05);
+}
+.card h2, .card h3 { margin: 0 0 12px; }
+.card p { line-height: 1.5; }
+
+.auth { max-width: 380px; margin: 64px auto; }
+.auth h1 { margin-top: 0; text-align: center; }
+
+form { display: flex; flex-direction: column; gap: 12px; }
+
+input, textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+input:focus, textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: -1px;
+}
+
+.btn, .btn-danger, .btn-ghost {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn { background: var(--primary); color: #fff; }
+.btn:hover { background: var(--primary-hover); }
+.btn-danger { background: transparent; color: var(--danger); padding: 4px 10px; }
+.btn-danger:hover { background: #fdecec; }
+.btn-ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+.btn-ghost:hover { background: var(--bg); }
+
+.row { display: flex; justify-content: space-between; align-items: center; }
+.muted { color: var(--muted); }
+.center { text-align: center; }
+.error {
+  background: #fdecec;
+  color: var(--danger);
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 0 0 12px;
+}
