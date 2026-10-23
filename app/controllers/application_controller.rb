@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
 
   # Changes to the importmap will invalidate the etag for HTML responses
   stale_when_importmap_changes
+
+  include Authenticable
+
+  rescue_from ActiveRecord::RecordNotFound do
+    render json: { error: "Not found" }, status: :not_found
+  end
 end
